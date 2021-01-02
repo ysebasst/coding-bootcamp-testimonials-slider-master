@@ -31,6 +31,60 @@ main {
 
 .slide {
   max-width: 327px;
+  @media screen and (min-width: 1024px) {
+    max-width: 1110px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    &-slider {
+      grid-column: 2;
+      margin-left: -142px !important;
+      padding-top: 64px !important;
+      padding-bottom: 53px !important;
+      position: relative;
+      > img {
+        width: 540px !important;
+      }
+      &-controls {
+        position: absolute;
+        bottom: 25px;
+        left: 20%;
+        width: 112px !important;
+        height: 56px !important;
+        margin-top: -28px !important;
+        > img {
+          width: 56px !important;
+          height: 56px !important;
+          padding: 21px 23px !important;
+        }
+      }
+    }
+    &-info {
+      grid-row: 1;
+      grid-column: 1;
+      text-align: left !important;
+      padding: 2.5rem 0 !important;
+      > img {
+        width: 120px !important;
+        left: calc(20% - 30px) !important;
+        top: 0;
+      }
+      p {
+        font-size: 1.75rem !important;
+        line-height: 2.5rem !important;
+      }
+      &-description {
+        display: flex;
+        align-items: center;
+        h1 {
+          margin: 0 !important;
+        }
+        span {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
   &-slider {
     background-image: url("../images/pattern-bg.svg");
     background-repeat: no-repeat;
@@ -42,7 +96,6 @@ main {
     margin: 2rem 0;
     padding-top: 30px;
     padding-bottom: 5px;
-    height: 308px;
     > img {
       display: block;
       width: 254px;
@@ -80,7 +133,7 @@ main {
       top: 0;
     }
     p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       line-height: 1.5rem;
       font-weight: 300;
     }
